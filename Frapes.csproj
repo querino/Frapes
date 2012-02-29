@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FB7D0138-15E1-4975-AAA2-6433D1C1A071}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Frapes</AssemblyName>
+    <Description>Framework of Process Heterogeneous Scheduling</Description>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BasicProcess.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Defines.cs" />
+    <Compile Include="BasicNode.cs" />
+    <Compile Include="ProcessList.cs" />
+    <Compile Include="NodeList.cs" />
+    <Compile Include="Additional\Heuristic.cs" />
+    <Compile Include="Taxonomy\Hierarchical\Enumerative.cs" />
+    <Compile Include="Taxonomy\Hierarchical\IDynamic.cs" />
+    <Compile Include="Taxonomy\Hierarchical\IDynamicDist.cs" />
+    <Compile Include="Taxonomy\Hierarchical\IDynamicDistCoop.cs" />
+    <Compile Include="Taxonomy\Hierarchical\IDynamicDistCoopSubOptimal.cs" />
+    <Compile Include="Taxonomy\Hierarchical\IGlobal.cs" />
+    <Compile Include="Taxonomy\Hierarchical\IStatic.cs" />
+    <Compile Include="Taxonomy\Hierarchical\IStaticOptimal.cs" />
+    <Compile Include="Taxonomy\Hierarchical\IStaticSubOptimal.cs" />
+    <Compile Include="Taxonomy\Hierarchical\IStaticSubOptimalApproximate.cs" />
+    <Compile Include="Taxonomy\Hierarchical\StaticSubOptimalHeuristic.cs" />
+    <Compile Include="Taxonomy\Flat\LoadBalancing.cs" />
+    <Compile Include="Taxonomy\Flat\Adaptive.cs" />
+    <Compile Include="Taxonomy\Flat\Probabilistic.cs" />
+    <Compile Include="Taxonomy\Flat\DynamicAssignment.cs" />
+    <Compile Include="Taxonomy\Flat\Bidding.cs" />
+    <Compile Include="Additional\Graph.cs" />
+    <Compile Include="Additional\GraphNode.cs" />
+    <Compile Include="Additional\GraphEdge.cs" />
+    <Compile Include="Additional\LoadIndex.cs" />
+    <Compile Include="Additional\GraphCutset.cs" />
+    <Compile Include="Additional\CostFunction.cs" />
+    <Compile Include="Additional\Constraint.cs" />
+    <Compile Include="Additional\BidOffer.cs" />
+    <Compile Include="Additional\MigrationMechanism.cs" />
+    <Compile Include="Additional\TaskOfferRequirement.cs" />
+    <Compile Include="Additional\TaskOffer.cs" />
+    <Compile Include="Taxonomy\Hierarchical\MathProgramming.cs" />
+    <Compile Include="Taxonomy\Hierarchical\GraphTheory.cs" />
+    <Compile Include="Taxonomy\Hierarchical\QueuingTheory.cs" />
+    <Compile Include="Taxonomy\Hierarchical\DynamicDistCoopOptimal.cs" />
+    <Compile Include="Taxonomy\Hierarchical\DynamicDistCoopSubOptimalApproximate.cs" />
+    <Compile Include="Taxonomy\Hierarchical\DynamicDistCoopSubOptimalHeuristic.cs" />
+    <Compile Include="Taxonomy\Hierarchical\DynamicDistNonCoop.cs" />
+    <Compile Include="Taxonomy\Hierarchical\DynamicNonDist.cs" />
+    <Compile Include="Algorithms\FirstComeFirstServe.cs" />
+    <Compile Include="Algorithms\RoundRobin.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Additional\" />
+    <Folder Include="Taxonomy\" />
+    <Folder Include="Algorithms\" />
+  </ItemGroup>
+</Project>
